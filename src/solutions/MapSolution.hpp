@@ -29,18 +29,11 @@ class MapSolution {
   }
 
   auto get_number_of_crossing(const Vec2d& query) -> int {
-    // std::cout << "call" << std::endl;
     Vec2d compressed = compress_point(query);
-    // std::cout << "compressed" << std::endl;
     if (compressed.x < 0 || compressed.x >= static_cast<int>(compressed_x.size()) ||
         compressed.y < 0 || compressed.y >= static_cast<int>(compressed_y.size())) {
-      // std::cout << "if statement" << std::endl;
       return 0;
     }
-    // std::cout << "after if" << std::endl;
-    // std::cout << "solution_map[compressed.x][compressed.y] " << compressed.x << ' ' << compressed.y
-    //           << std::endl;
-    // std::cout << "get " << solution_map[compressed.x][compressed.y] << std::endl;
     return solution_map[compressed.x][compressed.y];
   }
 
