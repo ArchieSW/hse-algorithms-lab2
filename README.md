@@ -7,7 +7,19 @@
 | Исходники с контеста | [lab2.cpp](./lab2.cpp) |
 | Графики и результаты замеров:   | [Google sheets](https://docs.google.com/spreadsheets/d/1flGAFltMPkYkREZPRvVBtpYqggEHKgOsAulFs_ydhzQ/edit?usp=sharing)   |
 
+## Использование
+Для компиляции используется система сборки [meson](https://mesonbuild.com/)
 
+Компиляция:
+```bash
+meson setup builddir
+meson compile -C builddir
+```
+Запуск:
+```bash
+./builddir/lab2 # Для запуска решения контеста
+./builddir/bench # Для запуска замера производительности
+```
 
 ## Описание задачи
 > A. Точка среди прямоугольников
